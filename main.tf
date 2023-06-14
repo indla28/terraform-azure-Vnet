@@ -7,9 +7,8 @@ provider "azurerm" {
   subscription_id = "90ea7441-2e11-46b0-b9af-4db22e508db0"
 }
 terraform{
-  backend "local"{
-    path="E:/devops_backend/vmfile.tfstate"
-  }
+  backend "azurerm"{
+     }
 }
 resource "azurerm_resource_group" "vnet_rg" {
   name     = var.rgname
